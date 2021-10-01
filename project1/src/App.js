@@ -15,7 +15,7 @@ function App() {
       <Route path ="/notes">
         <Notes/>
       </Route>
-      <Route path ="/new-note">
+      <Route path ="/create">
         <CreateNote/>
       </Route>
     </Router>

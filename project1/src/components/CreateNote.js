@@ -2,15 +2,13 @@ import React, {useState} from "react";
 import axios from "axios";
 
 function CreateNote(){
-
     const [input, setInput] = useState({
         title: "",
         content: ""
     });
-    
 
-    function handleChange(event){
-        const {name, value} = event.target;
+    function handleChange(e){
+        const {name, value} = e.target;
 
         setInput(prevInput => {
 
@@ -19,20 +17,26 @@ function CreateNote(){
             [name]: value
             }
            
-        })
+        });
     }
 
-    function handleClick(event){
-        event.preventDefault();
+    function handleClick(e){
+        e.preventDefault();
+       
 
         const newNote = {
             title: input.title,
             content: input.content
         }
-
-        axios.post("http://localhost:5000/new-note", newNote );
-        
-
+        console.log(newNote);
+        axios.post("http://localhost:5000/create", newNote)
+        .then(res => {
+            console.log(`statusCode: ${res.status}`)
+            console.log(res)
+        })
+        .catch(error => {
+            console.error(error)
+        });
     }
 
 

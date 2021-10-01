@@ -13,7 +13,7 @@ function Navbar(){
                 <Link to ="/notes" className = "nav-link">NOTES</Link>
             </li>
                <li className = "nav-item">
-                <Link to ="/new-note" className = "nav-link">NEW NOTE</Link>
+                <Link to ="/create" className = "nav-link">NEW NOTE</Link>
             </li>
            
         </nav>
