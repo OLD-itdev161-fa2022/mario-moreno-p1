@@ -10,7 +10,6 @@ const connectDatabase = async () => {
         await mongoose.connect(db, {
             useUnifiedTopology: true
         });
-
         console.log("Connected to notesDB");
 
     }catch{

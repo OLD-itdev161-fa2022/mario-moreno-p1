@@ -1,11 +1,8 @@
 import express from "express";
-
-
-const Note = require("../models/noteModel");
 const router = express.Router();
+const Note = require("../models/noteModel");
 
-router.route("/new-note").post((req, res) => {
-
+router.route("/create").post((req, res) => {
     const title = req.body.title;
     const content = req.body.content;
 
@@ -18,5 +15,4 @@ router.route("/new-note").post((req, res) => {
 
 });
 
-
-export default router;
+module.exports = router;
