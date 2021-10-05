@@ -18,12 +18,6 @@ app.get("/", (req, res) =>{
     res.send("http get request sent to root end point from port 5000");
 });
 
-app.delete("/delete/:id", (req, res) => {
-    const id = req.params.id;
-    Note.deleteOne({_id: id});
-   
-});
-
 
 const port = 5000;
 app.listen(port, () => console.log(`express server running on ${port}`));
