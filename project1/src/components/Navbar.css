@@ -1,3 +1,10 @@
 .nav-link{
     color: white;
 }
+.nav-link:focus{
+    color: chocolate;
+}
+
+.nav-link:hover{
+    color:coral;
+}

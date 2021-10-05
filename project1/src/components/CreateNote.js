@@ -37,8 +37,15 @@ function CreateNote(){
         .catch(error => {
             console.error(error)
         });
-    }
 
+        alert("note added");
+
+        setInput({
+            title: "",
+            content: ""
+
+        });
+    }
 
     return(
         <div className="container">
@@ -51,7 +58,7 @@ function CreateNote(){
             <textarea onChange = {handleChange} name="content" value ={input.content} className="form-control" autoComplete="off" placeholder="What's on your mind?">
             </textarea>
         </div>
-       <button onClick ={handleClick} className="btn btn-large btn-secondary">ADD NOTE</button>
+       <button onClick ={handleClick} className="btn btn-large btn-warning">ADD NOTE</button>
        
        </form>
         </div>
