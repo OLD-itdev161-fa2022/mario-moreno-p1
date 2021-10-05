@@ -16,7 +16,11 @@ function Notes(){
                 return res.json()
             }
         }).then((jsonRes) => setNotes(jsonRes));
-    },[]);
+
+        return()=> {
+            console.log("rendering...");
+        }
+    });
 
     function deleteNote(id){
         axios.delete("/delete/" + id);

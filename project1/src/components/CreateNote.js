@@ -9,14 +9,11 @@ function CreateNote(){
 
     function handleChange(e){
         const {name, value} = e.target;
-
         setInput(prevInput => {
-
             return {
                  ...prevInput,
             [name]: value
             }
-           
         });
     }
 
@@ -52,7 +49,7 @@ function CreateNote(){
         <h1>Create New Note</h1>
        <form>
         <div className="mb-3">
-            <input onChange = {handleChange} name="title" value ={input.title} className="form-control" autoComplete="off" placeholder="Note Title" />
+            <input onChange = {handleChange} name="title" value ={input.title} className="form-control"  autoComplete="off" placeholder="Note Title" />
         </div>
         <div className="mb-3">
             <textarea onChange = {handleChange} name="content" value ={input.content} className="form-control" autoComplete="off" placeholder="What's on your mind?">
