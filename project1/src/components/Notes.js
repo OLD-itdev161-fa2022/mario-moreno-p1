@@ -28,7 +28,6 @@ function Notes(){
         alert("item deleted");
     }
 
-
     return(
         <div className="container">
             <h1>Notes Page</h1>
